@@ -1,18 +1,16 @@
 package com.silva.tenant.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class Task {
+public class Task implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String tittle;
+    private String title;
     private Integer status;
 
     public Long getId() {
@@ -23,12 +21,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Integer getStatus() {
@@ -49,6 +47,6 @@ public class Task {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, tittle, status);
+        return Objects.hash(id, title, status);
     }
 }
