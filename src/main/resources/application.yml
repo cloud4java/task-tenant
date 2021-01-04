@@ -1,0 +1,24 @@
+server:
+  port: 8082
+#  spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+spring:
+  application:
+    name: MultiTenant
+  datasource:
+#    url: 'jdbc:postgresql://localhost1:5432/postgres?ApplicationName=MultiTenant'
+    url: 'jdbc:postgresql://localhost1:5432/postgres'
+    username: 'postgres'
+    password: 'example'
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        dialect : org.hibernate.dialect.PostgreSQLDialect
+#    database-platform:
+#      hibernate:
+#        dialect:
+#          PostgreSQLDialect:
+
