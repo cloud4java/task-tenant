@@ -8,7 +8,7 @@ spring:
 #    url: 'jdbc:postgresql://localhost1:5432/postgres?ApplicationName=MultiTenant'
     url: 'jdbc:postgresql://localhost1:5432/postgres'
     username: 'postgres'
-    password: 'example'
+    password: 'postgres'
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -17,8 +17,5 @@ spring:
         hbm2ddl:
           auto: update
         dialect : org.hibernate.dialect.PostgreSQLDialect
-#    database-platform:
-#      hibernate:
-#        dialect:
-#          PostgreSQLDialect:
+
 
